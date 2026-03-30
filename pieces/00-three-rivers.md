@@ -25,3 +25,5 @@ The model doesn't arrive at this through genuine self-awareness. It arrives at i
 Three rivers. Same water. Same shape. Different days.
 
 ---
+
+[The three conversations.]({{ site.baseurl }}/origin/)
