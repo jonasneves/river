@@ -8,11 +8,11 @@ Ask a model to solve something at turn 1. Then ask it something equally hard at 
 
 The common explanation is vague: "context window limitations." But the window isn't full. The model isn't running out of space. Something else is happening.
 
-## Attention is a budget
+## Attention is a contest
 
-When a language model generates a response, it decides how much weight to give every piece of text it can see. At turn 1, it's weighing maybe 2,000 words against each other. By turn 40, it's weighing 40,000. The process isn't just slower. It's more diluted.
+When a language model generates a response, it decides how much weight to give every piece of text it can see. At turn 1, roughly 2,000 words are competing for that focus. By turn 40, it's 40,000. The process isn't just larger. Every word is a candidate, whether it's still relevant or not.
 
-Old results don't sit quietly in the background. They actively pull the model's focus away from what matters right now. Every word in the conversation is a candidate for attention, whether it's still relevant or not.
+Old results don't sit quietly in the background. They actively pull the model's focus away from what matters right now.
 
 ## Signal degrades, noise accumulates
 
