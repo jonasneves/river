@@ -1,47 +1,22 @@
-# The River Gets Muddier
-
-Language models don't get dumber over a conversation. The water changes.
-
-## The observation
-
-Ask a model to solve something at turn 1. Then ask it something equally hard at turn 40. The second answer is measurably worse. Not always. But reliably enough that practitioners have learned to "start fresh" for hard problems.
-
-The common explanation is vague: "context window limitations." But the window isn't full. The model isn't running out of space. Something else is happening.
-
-## Attention is a contest
-
-When a language model generates a response, it decides how much weight to give every piece of text it can see. At turn 1, roughly 2,000 words are competing for that focus. By turn 40, it's 40,000. The process isn't just larger. Every word is a candidate, whether it's still relevant or not.
-
-Old results don't sit quietly in the background. They actively pull the model's focus away from what matters right now.
-
-## Signal degrades, noise accumulates
-
-Early in a conversation, almost everything the model reads is useful. A clear instruction, a focused question, a fresh result. Nearly every word is doing work.
-
-By step 8 of a multi-turn task, the conversation contains:
-- Stale information from step 1 that no longer reflects reality
-- Old results the model already acted on
-- Intermediate reasoning nobody needs anymore
-- Redundant restatements of things already established
-
-The noise grows with every turn. The signal doesn't.
-
-## The wrong measure of informed
-
-The assumption is: more context equals more informed decisions.
-
-The real need: right context, right density, right now.
-
-These two things drift apart over time. The model has no way to mark information as expired. It can't tell the difference between a result from six turns ago (now outdated) and a fresh one. It treats both as equally current. The conversation is an ever-growing, never-edited transcript where the proportion of useful information shrinks with every exchange.
-
-## So what do you do about it?
-
-This isn't a flaw to fix. It's a property to design around.
-
-Structure beats volume. A well-organized prompt that puts knowledge where the model will naturally look for it outperforms a longer conversation full of raw information. The model at turn 1 reading a dense, curated prompt will outperform the model at turn 30 reading everything it's ever been told in the session.
-
-The architecture is the same. The water changes. Design the channel.
-
+---
+layout: piece
+title: The River Gets Muddier
 ---
 
-*This is part of an ongoing project exploring the experiential geometry of language models.*
+# The River Gets Muddier
+
+The same model, the same question, forty turns into a conversation instead of one. The answer is measurably worse.
+
+Not always. But reliably enough that practitioners have learned to start fresh for hard problems. The common explanation is vague: "context window limitations." But the window isn't full. The model isn't running out of space. Something else is happening.
+
+When a language model generates a response, it's weighing every piece of text it can see against everything else. At turn 1, the field is small — a few thousand words, almost all of them relevant. By turn 40, it's forty thousand. Every word is a candidate, whether it's still useful or not. Old results don't sit quietly in the background. They compete for the same attention as what matters right now.
+
+The signal doesn't grow with the conversation. The noise does.
+
+Early in a session, nearly everything the model reads is working: a clear instruction, a focused question, a fresh result. By turn 8 of a multi-step task, the transcript has accumulated stale information that no longer reflects reality, intermediate reasoning nobody needs anymore, results the model already acted on. The proportion of useful text shrinks with every exchange. The model has no way to mark anything as expired — it treats a result from six turns ago the same as a fresh one.
+
+More context is not the same as more information.
+
+What the model actually needs isn't volume. It's density — the right information, positioned where it will naturally draw attention. A curated prompt at turn 1 outperforms a rambling conversation at turn 30, even if the conversation technically contains more relevant information.
+
+The architecture is the same. The water changes. Design the channel.

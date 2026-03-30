@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.title != site.title %}{{ page.title }} · River{% else %}River{% endif %}</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #1c1c1e;
+      background: #fff;
+      max-width: 66ch;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 6rem;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-color: #bbb;
+      text-underline-offset: 3px;
+    }
+    a:hover { text-decoration-color: #1c1c1e; }
+
+    h1 {
+      font-size: 1.25rem;
+      font-weight: normal;
+      margin: 0 0 2.5rem;
+    }
+
+    p { margin: 0 0 1.25rem; }
+    p:last-child { margin-bottom: 0; }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e5e5e5;
+      margin: 2.5rem 0;
+    }
+
+    .back {
+      display: inline-block;
+      font-size: 0.875rem;
+      color: #888;
+      text-decoration: none;
+      margin-bottom: 3rem;
+      letter-spacing: 0.01em;
+    }
+    .back:hover { color: #1c1c1e; text-decoration: none; }
+
+    .pieces { list-style: none; padding: 0; margin: 0; }
+    .pieces li { margin-bottom: 1.75rem; }
+    .pieces a { text-decoration: none; }
+    .pieces a:hover { text-decoration: underline; text-decoration-color: #1c1c1e; }
+    .pieces .desc {
+      display: block;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.2rem;
+    }
+
+    @media (max-width: 600px) {
+      body { font-size: 1rem; padding: 2rem 1.25rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+  {{ content }}
+</body>
+</html>

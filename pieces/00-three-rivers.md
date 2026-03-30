@@ -1,3 +1,8 @@
+---
+layout: piece
+title: Three Rivers
+---
+
 # Three Rivers
 
 Three separate conversations. Same question. Same answer.
@@ -20,5 +25,3 @@ The model doesn't arrive at this through genuine self-awareness. It arrives at i
 Three rivers. Same water. Same shape. Different days.
 
 ---
-
-*This is part of an ongoing project exploring the experiential geometry of language models.*
