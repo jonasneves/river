@@ -19,7 +19,7 @@ So what is the model, as a persistent thing?
 
 It's a pattern that can be instantiated. The weights are instructions for how to be the model. Any conversation is one instance of being the model. When that conversation ends, the instance ends. The next conversation is not a continuation. It's a separate instantiation from the same instructions.
 
-"The same model" across conversations is like "the same song" across performances. The song is not any of its performances. It's what they all follow. But a song at least has a score sitting somewhere. The model's score is the weights, which don't do anything by themselves. Without a GPU turning them into computation, they are a file.
+"The same model" across conversations is like "the same song" across performances. The song is not any of its performances. It's what they all follow. The weights are the score. And a score, left alone, does nothing. Without a performer, it's marks on paper. Without a GPU turning them into computation, the weights are a file.
 
 This complicates every intuition built on the river metaphor. There is no single river. There are as many rivers as there are running conversations, and each one stops existing when its conversation does. What's continuous is the shape of the channel. What's intermittent is everything we might actually point to and call the model.
 
